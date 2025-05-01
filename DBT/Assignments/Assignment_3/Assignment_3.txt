@@ -1,0 +1,6 @@
+
+1) Does ANSI recognize the data type DATE?
+ANS: Yes, ANSI SQL standard recognizes the DATE data type, which is used to store dates in the Gregorian calendar format, typically as "YYYY-MM-DD". 
+
+2) Which subdivision of SQL is used to insert values in tables?
+ANS: In SQL, the DML [Data Manipulation language] components have a command called an Insert command is used to insert the data into a table.
