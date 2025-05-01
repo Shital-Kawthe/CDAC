@@ -1,0 +1,45 @@
+5) Write a query that will produce the snum values of all salespeople (suppress the 
+duplicates) with orders in the Orders table.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| performance_schema |
+| shital             |
++--------------------+
+3 rows in set (0.02 sec)
+
+mysql> use Shital;
+Database changed
+mysql> select * from Orders;
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3001 |   18.69 | 1990-10-03 | 2008 | 1007 |
+| 3003 |  767.19 | 1990-10-03 | 2001 | 1001 |
+| 3002 | 1900.10 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160.45 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3007 |   75.75 | 1990-10-04 | 2004 | 1002 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+10 rows in set (0.00 sec)
+
+mysql> select distinct snum from orders;
++------+
+| snum |
++------+
+| 1007 |
+| 1001 |
+| 1004 |
+| 1002 |
+| 1003 |
++------+
+5 rows in set (0.00 sec)
+
+mysql>

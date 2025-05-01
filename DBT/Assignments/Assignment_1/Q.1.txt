@@ -1,0 +1,47 @@
+1)Create the following tables with the given structures and insert sample data as specified: -  
+Create the following tables with the given structures and insert sample data as specified: -  
+  
+A) SALESPEOPLE  
+              Snum             int(4)  
+              Sname            varchar(10)  
+              City             varchar(10)  
+              Comm             float(3,2)  
+
+SALES PEOPLE  
+  
+SNUM  SNAME    CITY       COMM  
+1001  Peel     London     .12  
+1002  Serres   San Jose   .13  
+1004  Motika   London     .11  
+1007  Rifkin   Barcelona  .15  
+1003  Axelrod  New York   .10 
+
+mysql> use Shital
+Database changed
+mysql> create table SALESPEOPLE (Snum int(4),Sname varchar(10),City varchar(10),Comm float(3,2));
+Query OK, 0 rows affected, 2 warnings (0.04 sec)
+
+mysql> select * from SALESPEOPLE;
+Empty set (0.02 sec)
+
+mysql> insert into SALESPEOPLE values(1001,'Peel','London',.12),
+    -> (1002,'Serres','San Jose',.13),
+    -> (1004,'Motika','London',.11),
+    -> (1007,'Rifkin','Barcelona',.15),
+    -> (1003,'Axelrod','New York',.10);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from SALESPEOPLE;
++------+---------+-----------+------+
+| Snum | Sname   | City      | Comm |
++------+---------+-----------+------+
+| 1001 | Peel    | London    | 0.12 |
+| 1002 | Serres  | San Jose  | 0.13 |
+| 1004 | Motika  | London    | 0.11 |
+| 1007 | Rifkin  | Barcelona | 0.15 |
+| 1003 | Axelrod | New York  | 0.10 |
++------+---------+-----------+------+
+5 rows in set (0.00 sec)
+
+mysql>
