@@ -1,0 +1,41 @@
+<!-- Que 2: Create a form with First name, last name, contact no., email id. Write a JavaScript function to get the values
+ from that particular form. When a submit button is clicked, form values should be printed on the brower page. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Details</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="userForm">
+    First Name: <input type="text" id="Fname"><br><br>
+    Last Name: <input type="text" id="Lname"><br><br>
+    Contact No.: <input type="text" id="Contact"><br><br>
+    Email ID: <input type="email" id="Email"><br><br>
+    <button type="button" onclick="printValues()">Submit</button>
+</form>
+
+<h3>Form Details:</h3>
+<p id="output"></p>
+
+<script>
+function printValues() {
+    var firstName = document.getElementById("Fname").value;
+    var lastName = document.getElementById("Lname").value;
+    var contactNo = document.getElementById("Contact").value;
+    var emailId = document.getElementById("Email").value;
+    
+    var output = "First Name: " + firstName + "<br>" +
+                 "Last Name: " + lastName + "<br>" +
+                 "Contact No.: " + contactNo + "<br>" +
+                 "Email ID: " + emailId;
+    
+    document.getElementById("output").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

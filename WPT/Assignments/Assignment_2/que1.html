@@ -1,0 +1,27 @@
+<!-- Que 1. Create an html file with a submit button and a paragraph. Now modify the style of the paragraph text through JavaScript code. 
+Task : Clicking on the button, the font, font size and colour of the paragraph text will be changed-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Change Paragraph Style</title>
+</head>
+<body>
+    <h2>Styling a Paragraph</h2>
+
+    <p id="Paragraph">
+        HTML or Hypertext Markup Language, is the fundamental language for building web pages. It's a simple language that uses tags and elements to structure content, like text, images, and links. Think of it as the skeleton of a website, providing the basic layout and organization.
+</p>
+<button onclick="changeStyle ()">Submit</button>
+
+<script>
+    function changeStyle () {
+        var para = document.getElementById("Paragraph");
+        para.style.fontFamily = "Calibri";
+        para.style.fontSize = "25px";
+        para.style.color = "Red"
+    }
+</script>
+</body>
+</html>
